@@ -294,3 +294,93 @@ body.dark-mode {
         margin-bottom: 10px;
     }
 }
+/* Дене және жалпы стиль */
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    font-size: 18px;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Түнгі режим */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/* Тауар карталары */
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    width: 23%; /* Десктоп үшін */
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    display: inline-block;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.buy-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Мобильді құрылғылар үшін */
+@media (max-width: 768px) {
+    /* Тауар карталарының стилі */
+    .product-card {
+        width: 100%; /* Тауар карточкалары толық енімен көрсетіледі */
+    }
+
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Навигация */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Жалпы стильдер */
+    body {
+        padding: 10px;
+    }
+
+    /* Картаны түзеу */
+    #cart-items {
+        padding-left: 20px;
+    }
+
+    #toggle-theme {
+        width: 100%;
+    }
+}
